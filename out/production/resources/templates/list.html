@@ -32,11 +32,35 @@
                 <li><a href="/form.html  ">회원가입</a></li>
                 <li><a href="/list.html  ">사용자 목록</a></li>
 
-            </ul> 
+            </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<h1>hello!</h1>
+
+<div class="container">
+    <table class="table table-condensed">
+        <caption>사용자 목록</caption>
+        <thead>
+            <tr>
+                <th>사용자 이름</th>
+                <td>이름</td>
+                <td>이메일</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#users}}
+            <tr>
+                <th scope="row">{{userId}}</th>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+            </tr>
+            {{/users}}
+        </tbody>
+    </table>
+
+</div>
+
+
 <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 <script src="/webjars/jquery/3.1.0/jquery.min.js"></script>
 <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
